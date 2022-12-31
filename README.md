@@ -39,3 +39,31 @@ npm run test:unit
 ```sh
 npm run lint
 ```
+
+
+### Features
+
+## Firebase login - supports logging in with google
+## Onboarding - on the first time user enters the app (local storage for developing), show him the onboarding and leave it available in menu
+## Telegram like interface on non-mobile: Left side for Contacts, middle for the chat/channel, right for info. 
+
+Page structure:{
+    Onboarding,
+    Login,
+    Home,
+
+}
+
+Component structure:{
+    UI: {
+        Tab button (mobile),
+        Profile Pic,
+        Icon Btn,
+        Search input,
+        Message input,
+    },
+    Chat Feed + {ChatItem},
+    Chat + {Chat message(+reactions probably)}
+    NavigationMenu,
+    Group/Chat Info (appears only when chat is selected)
+}
