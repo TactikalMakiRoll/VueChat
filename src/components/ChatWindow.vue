@@ -1,8 +1,8 @@
 <template>
-    <div class="h-screen">
-        <div class="relative px-4 sticky flex justify-between top-0 w-full py-7 border-b-2 border-slate-800 bg-[rgba(6,27,45,1)]">
+    <div class="h-screen flex flex-col">
+        <div class="mb-auto relative px-4 sticky flex justify-between top-0 w-full py-7 border-b-2 border-slate-800 bg-[rgba(6,27,45,1)]">
             <div class="flex">
-                <img class="w-14 h-14 aspect-square mr-2" src="../assets/profile-image.png" alt="profile pic">
+                <img class="w-14 mr-3" src="../assets/profile-image.png" alt="profile pic">
                 <div>
                     <h2 class="font-bold">Steve Williams</h2>
                     <span class="text-gray-400 whitespace-nowrap">Last seen 3 hours ago</span>
@@ -26,26 +26,41 @@
                 </button>
             </div>
         </div>
-        <div class="px-4 pt-5 flex flex-col space-y-5 justify-end">
-            <div class="inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ">
-                <pre>Hi Alex! What's Up?</pre>
+        <div class="px-4 pt-5 space-y-5 w-full flex flex-col pb-5 overflow-scroll">
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p class="">Hi Alex! What's Up?asfsdafkl jasfkl jsaklfj kalsjflk ajslkf sjkl jflkasj klfjlkas jfkljas dlkfja lksjfdlkj alk</p>
             </div>
             
-            <div>
-                <pre>Oh, hello! All perfectly.</pre>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg mr-auto">
+                <p>Oh, hello! All perfectly.</p>
             </div>
             
-            <div>
-                <pre>Hi Alex! What's Up?</pre>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
             </div>
             
-            <div>
-                <pre>Hi Alex! What's Up?</pre>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
+            </div>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
+            </div>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
+            </div>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
+            </div>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
+            </div>
+            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
+                <p>Hi Alex! What's Up?</p>
             </div>
         </div>
-        <div class="px-3 py-3 w-full flex fixed bottom-0 border-t-2 border-slate-800">
+        <div class="px-3 py-3 w-full flex border-t-2 border-slate-800 align-self-end">
             <input placeholder="Write your message..." class="italic grow bg-slate-800 rounded-sm mr-3 py-2 pl-2 placeholder:italic placeholder:text-slate-400" type="text" name="message" id="message">
-            <button class="p-2 rounded-full bg-purple-800">
+            <button class="p-2 rounded-full bg-[#1d6ace] hover:bg-gradient-to-br hover:from-[#a142ee] hover:to-[#4230a8]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
