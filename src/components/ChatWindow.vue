@@ -1,6 +1,6 @@
 <template>
     <div class="h-screen flex flex-col">
-        <div class="mb-auto relative px-4 sticky flex justify-between top-0 w-full py-7 border-b-2 border-slate-800 bg-[rgba(6,27,45,1)]">
+        <div class="mb-auto relative px-4 flex justify-between top-0 w-full py-7 border-b-2 border-slate-800 bg-[rgba(6,27,45,1)]">
             <div class="flex">
                 <img class="w-14 mr-3" src="../assets/profile-image.png" alt="profile pic">
                 <div>
@@ -19,7 +19,7 @@
                         <path stroke-linecap="round" d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z" />
                     </svg>
                 </button>
-                <button @mouseleave.self="drainSVG($event)" @mouseenter.self="fillSVG($event)" class="p-1">
+                <button @click="toggleInfo" @mouseleave.self="drainSVG($event)" @mouseenter.self="fillSVG($event)" class="p-1 hidden xl:inline-block">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM12.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0zM18.75 12a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
                     </svg>
@@ -70,14 +70,21 @@
 </template>
 
 <script setup>
+
+    const emit = defineEmits(['toggleInfo']);
+
     function fillSVG(e){
         e.target.childNodes[0].childNodes[0].setAttribute("fill","white");
-        console.log(e.target);
     };
     
     function drainSVG(e){
         e.target.childNodes[0].childNodes[0].setAttribute("fill","none");
     };
+
+    function toggleInfo(){
+        emit('toggleInfo');
+    }
+
 </script>
 
 <style>

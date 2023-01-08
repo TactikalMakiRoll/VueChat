@@ -1,6 +1,6 @@
 <template>
-    <div>
-        <div class="px-4 sticky flex justify-between top-0 w-full py-7 bg-[rgba(6,27,45,1)]">
+    <div class="h-screen flex flex-col">
+        <div class="px-4 justify-self-start flex justify-between top-0 w-full py-7 bg-[rgba(6,27,45,1)]">
             <h1 class="inline-block font-semibold tracking-widest">FEED</h1>
             <button class="inline-block tracking-widest">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hover:text-[#3CA4F7]">
@@ -9,9 +9,9 @@
             </button>
             <input class="hidden" type="text" name="searchfield" id="search">
         </div>
-        <div>
-            <section class="px-4 pt-6 pb-3 flex border-y-2 border-slate-800 w-full" v-for="chat in feedArray" :key="chat.id">
-                <img class="w-14" :src="getImgUrl(chat)" alt="profile pic">
+        <div class="overflow-scroll grow-0">
+            <section class="px-4 pt-6 pb-3 flex border-t-2 border-slate-800 w-full" v-for="chat in feedArray" :key="chat.id">
+                <img class="h-14" :src="getImgUrl(chat)" alt="profile pic">
                 <div class="flex justify-between ml-5 grow">
                 <div>
                     <h3 class="text-lg">{{ chat.name }}</h3>
