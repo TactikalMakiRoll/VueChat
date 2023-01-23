@@ -26,41 +26,13 @@
                 </button>
             </div>
         </div>
-        <div class="px-4 pt-5 space-y-5 w-full flex flex-col pb-5 overflow-scroll">
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p class="">Hi Alex! What's Up?asfsdafkl jasfkl jsaklfj kalsjflk ajslkf sjkl jflkasj klfjlkas jfkljas dlkfja lksjfdlkj alk</p>
-            </div>
+        <div class="px-4 pt-5 space-y-5 w-full flex flex-col pb-5 overflow-scroll scrollbar-hide">
+            <ChatMessage></ChatMessage>
             
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg mr-auto">
-                <p>Oh, hello! All perfectly.</p>
-            </div>
-            
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
-            <div class="max-w-full inline-block flex-none px-4 pt-2 pb-4 bg-blue-800 rounded-3xl drop-shadow-lg ml-auto">
-                <p>Hi Alex! What's Up?</p>
-            </div>
         </div>
         <div class="px-3 py-3 w-full flex border-t-2 border-slate-800 align-self-end">
-            <input placeholder="Write your message..." class="italic grow bg-slate-800 rounded-sm mr-3 py-2 pl-2 placeholder:italic placeholder:text-slate-400" type="text" name="message" id="message">
-            <button class="p-2 rounded-full bg-[#1d6ace] hover:bg-gradient-to-br hover:from-[#a142ee] hover:to-[#4230a8]">
+            <input v-model="messageText" placeholder="Write your message..." class="italic grow bg-slate-800 rounded-sm mr-3 py-2 pl-2 placeholder:italic placeholder:text-slate-400" type="text" name="message" id="message">
+            <button @click="sendMessage()" class="p-2 rounded-full bg-[#1d6ace] hover:bg-gradient-to-br hover:from-[#a142ee] hover:to-[#4230a8]">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5" />
                 </svg>
@@ -70,8 +42,12 @@
 </template>
 
 <script setup>
+    import { ref } from 'vue';
+    import ChatMessage from './UI/ChatMessage.vue';
 
     const emit = defineEmits(['toggleInfo']);
+
+    const messageText = ref("");
 
     function fillSVG(e){
         e.target.childNodes[0].childNodes[0].setAttribute("fill","white");
@@ -83,6 +59,10 @@
 
     function toggleInfo(){
         emit('toggleInfo');
+    }
+
+    function sendMessage(){
+        
     }
 
 </script>

@@ -40,6 +40,7 @@ for (let i = 0; i < 8; i++) {
     avatar: "profile-image.png",
     message: "Are you free tonidwaaaaaaasght fdsaf afsd asd fs fdas fas df asd fasd fas fewa fsd a?",
     last_date: "07:33AM",
+    messages: [],
   })
 }
 
